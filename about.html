@@ -1,0 +1,300 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/flickity.css">
+  <link rel="stylesheet" href="css/madmonks.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body onload="runner();">
+
+  <!-- Add your site or application content here -->
+  <div id="wrapper"></div>
+    <div id="menu-mobile" style="display: none;">
+      <ul>
+        <li><span class="disabled soon"><span class="menuitem">Live Sessions</span></span></li>
+        <li><span class="disabled soon"><span class="menuitem">Projects</span></span></li>
+        <li><a href="#">The Studio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/ig.svg"></a></span><span class="icon"><a href="https://youtube.com" target="_blank"><img src="img/ig.svg"></a></span></li>
+      </ul>
+      <div class="close" onclick="menuMobile()"><img src="img/Cerrar.svg"/></div>
+    </div>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.svg"></a>
+        </div>
+        <div class="burguer" onclick="menuMobile()"><img src="img/burguer.svg"/></div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><span class="disabled soon"><span class="menuitem">Live Sessions</span><span class="soontooltip">SOON!</span></span></li>
+          <li><span class="disabled soon"><span class="menuitem">Projects</span><span class="soontooltip">SOON!</span></span></li>
+          <li><a href="#">The Studio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="subscribe" onclick="manualOpenSubscriptionBox()">Subscribe</span></li>
+          <li><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/ig.svg"></a></span><span class="icon"><a href="https://youtube.com" target="_blank"><img src="img/yt.svg"></a></span><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/spot.svg"></a></span></li>
+        </ul>
+      </div>
+    </header>
+    <div id="content">
+      <div id="about">
+        <div id="comp-one" class="comp-one">
+          <div id="comp-one-bg-st" class="bg">
+            <img src="img/AHOP2600_edit 3.png">
+          </div>
+          <div class="hero">
+            <div class="top">
+              <div class="copy">
+                MUSIC PRODUCTION & AUDIOVISUAL EXPERIENCES
+              </div>
+              <div class="subcopy">
+                Exploring artistic expressions to find transformational value.
+              </div>
+            </div>
+            <div class="left">
+              <p>Mad Monk Studios® explores the heights of transcendence through music production and audiovisual experiences. Based in Mexico City, MMS creates a unique artistic platform that offers the infrastructure and expertise to help artists discover, transform and showcase their exceptional talents in a universal way.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="comp-two">
+          <div class="pic">
+            <img src="img/A01.png">
+          </div>
+          <div class="pic">
+            <img src="img/A02.png">
+          </div>
+          <div class="pic">
+            <img src="img/A03.png">
+          </div>
+          <div class="pic">
+            <img src="img/A04.png">
+          </div>
+        </div> -->
+        
+
+        <style>
+          .main-carousel{
+            margin-top: 1px;
+          }
+          .carousel-cell {
+            width: 35%; /* half-width */
+            height: auto;
+            margin-right: 1px;
+          }
+          .carousel-cell img{
+            width: 100%;
+          }
+        </style>
+        <div class="main-carousel">
+          <div class="carousel-cell"><img src="img/A01.png"></div>
+          <div class="carousel-cell"><img src="img/A02.png"></div>
+          <div class="carousel-cell"><img src="img/A03.png"></div>
+          <div class="carousel-cell"><img src="img/A04.png"></div>
+        </div>
+       
+
+        <div class="comp-three">
+          <div class="left">
+            <h2>HARNESSING THE POWER OF SPACE AND SOUND TO EVOKE STATES OF AWE.</h2>
+          </div>
+          <div class="right">
+            <p>At the crossroads of economic, political & social changes we believe our world needs moments of reflection, harmony and awe. Committed to the social impact of art, Mad Monk Studios® unveils an alternative process of artistic creation, providing a temple for artists to synchronize the energies of stillness and action, find their ‘why’ and transform it into honest, globally competitive productions to offer their audiences mindbending experiences with cultural relevance, positive impact and an opportunity to connect within.</p>
+          </div>
+        </div>
+        <div class="comp-four">
+          <div class="left">
+            <img src="img/AHOP2600_edit 4.png"/>
+          </div>
+          <div class="right">
+            <img src="img/AHOP2600_edit 5.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="left">®2020. madmonkstudios.com</div>
+      <div class="right"><a href="#">Privacy Policy</a></div>
+    </footer>
+  </div>
+  <!-- 
+    🍪🍪🍪
+    <br>
+    <button onclick="cookiesRejected()">Reject</button>
+    <button onclick="cookiesAccepted()">Accept</button> 
+  -->
+  <div id="cookies">
+    <span class="text">If you continue to use our website, you agree to our use of <a href="#">cookies.</a></span>
+    <span class="close" onclick="cookiesAccepted()"><img src="img/pico.svg"></span>
+  </div>
+  <!-- 
+    🍪🍪🍪
+    <br>
+    <button onclick="checkCookiesPolicy()">Check Cookies</button>
+    <button onclick="eraseCookiesPolicy()">Erase Cookies</button> 
+  -->
+  <div id="subscribe">
+    <span class="close" onclick="closeSubscriptionBox()"><img src="img/Close.svg"></span>
+    <span class="text">Explore the latest sounds, gigs and news before everyone else. Subscribe to our newsletter.</span>
+    <input type="text" placeholder="Enter your email">
+    <span class="subtext">You may unsubscribe at any time.</span>
+  </div>
+
+  <script>
+    function manualOpenSubscriptionBox(){
+      document.getElementById('subscribe').style.display = 'block';
+      document.getElementById('subscribe').style.left = '0px';
+      document.getElementById('subscribe').style.top = '0px';
+    }
+    function openSubscriptionBox(){
+      document.getElementById('subscribe').style.display = 'block';
+    }
+    function closeSubscriptionBox(){
+      document.getElementById('subscribe').style.display = 'none';
+    }
+  </script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/flickity.js"></script>
+  <script>
+    var tooltip = document.querySelectorAll('.soontooltip');
+    document.addEventListener('mousemove', fn, false);
+    function fn(e) {
+        for (var i=tooltip.length; i--;) {
+            tooltip[i].style.left = e.clientX + 'px';
+            tooltip[i].style.top = e.clientY + 'px';
+        }
+    }
+  </script>
+  <script>
+    function runner(){
+      console.log("Runner")
+      const cookiesPolicy = localStorage.getItem('cookiesPolicy');
+      if (cookiesPolicy === null){
+        console.log('no cookies')
+        document.getElementById('cookies').style.display = 'block';
+      } 
+      else if (cookiesPolicy === 'rejected'){
+        console.log('rejected cookies')
+      };
+
+      
+      var compOneBgHeight = document.getElementById('comp-one-bg').clientHeight;
+      document.getElementById('comp-one').style.height = compOneBgHeight+'px';
+
+    }
+    function cookiesRejected(){
+      console.log("Rejected")
+      localStorage.setItem('cookiesPolicy', 'rejected');
+    }
+    function cookiesAccepted(){
+      console.log("Accepted")
+      localStorage.setItem('cookiesPolicy', 'accepted');
+    }
+    function checkCookiesPolicy(){
+      const cookiesPolicy = localStorage.getItem('cookiesPolicy');
+      console.log(cookiesPolicy);
+    }
+    function eraseCookiesPolicy(){
+      localStorage.removeItem('cookiesPolicy');
+      console.log('Deleted cookiesPolicy');
+    }
+    function subscribePopClose(){
+      localStorage.setItem('subscribePop', 'close');
+    }
+    function menuMobile(){
+      var menu = document.getElementById('menu-mobile');
+      if (menu.style.display == 'none'){
+        menu.style.display = 'block';
+      }
+      else {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+  <script>
+    
+
+
+
+    const carousels = document.querySelectorAll('.main-carousel'), 
+      args = {
+        accessibility: true,
+        resize: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+        percentPosition: true,
+        setGallerySize: true,
+      };
+
+    carousels.forEach((carousel) => {
+      let requestId;
+
+      if (carousel.childNodes.length > 3) {
+        const mainTicker = new Flickity(carousel, args);
+
+        // Set initial position to be 0
+        mainTicker.x = 0;
+
+        // Start the marquee animation
+        play();
+
+        // Main function that 'plays' the marquee.
+        function play() {
+          mainTicker.x = mainTicker.x - 1.5;
+          mainTicker.settle(mainTicker.x);
+          requestId = window.requestAnimationFrame(play);
+        }
+
+        // Main function to cancel the animation.
+        function pause() {
+          if (requestId) {
+            window.cancelAnimationFrame(requestId)
+            requestId = undefined;
+          }
+        }
+
+        // Pause on mouse over / focusin
+        carousel.addEventListener('mouseover', pause, false);
+        carousel.addEventListener('focusin', pause, false);
+
+        // Unpause on mouse out / focusout
+        carousel.addEventListener('mouseout', play, false);
+        carousel.addEventListener('focusout', play, false);
+
+      }
+
+    });
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

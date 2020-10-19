@@ -1,0 +1,350 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/madmonks.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body onload="runner();">
+
+  <!-- Add your site or application content here -->
+  <div id="wrapper"></div>
+    <div id="menu-mobile" style="display: none;">
+      <ul>
+        <li><span class="disabled soon"><span class="menuitem">Live Sessions</span></span></li>
+        <li><span class="disabled soon"><span class="menuitem">Projects</span></span></li>
+        <li><a href="about.html">The Studio</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/ig.svg"></a></span><span class="icon"><a href="https://youtube.com" target="_blank"><img src="img/yt.svg"></a></span><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/spot.svg"></a></span></li>
+      </ul>
+      <div class="close" onclick="menuMobile()"><img src="img/Cerrar.svg"/></div>
+    </div>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.svg"></a>
+        </div>
+        <div class="burguer" onclick="menuMobile()"><img src="img/burguer.svg"/></div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><span class="disabled soon"><span class="menuitem">Live Sessions</span><span class="soontooltip">SOON!</span></span></li>
+          <li><span class="disabled soon"><span class="menuitem">Projects</span><span class="soontooltip">SOON!</span></span></li>
+          <li><a href="about.html">The Studio</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><span class="subscribe" onclick="openSubscriptionBox()">Subscribe</span></li>
+          <li><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/ig.svg"></a></span><span class="icon"><a href="https://youtube.com" target="_blank"><img src="img/yt.svg"></a></span><span class="icon"><a href="https://instagram.com" target="_blank"><img src="img/spot.svg"></a></span></li>
+        </ul>
+      </div>
+    </header>
+    <div id="content">
+      <div id="contact">
+        <div class="left">
+          <div class="info-block">
+            <h1>bookings &<br>general info</h1>
+            <h2>info@madmonkstudios.com<br>+521 55 1234 5678</h2>
+          </div>
+          <div class="info-block">
+            <h1>Location</h1>
+            <h2>Puebla 124<br>Roma Norte, Cuauhtémoc<br>06700, CDMX</h2>
+          </div>
+        </div>
+        <div id="map" class="right">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="left">®2020. madmonkstudios.com</div>
+      <div class="right"><a href="#">Privacy Policy</a></div>
+    </footer>
+  </div>
+  <!-- 
+    🍪🍪🍪
+    <br>
+    <button onclick="cookiesRejected()">Reject</button>
+    <button onclick="cookiesAccepted()">Accept</button> 
+  -->
+  <div id="cookies">
+    <span class="text">If you continue to use our website, you agree to our use of <a href="#">cookies.</a></span>
+    <span class="close" onclick="cookiesAccepted()"><img src="img/pico.svg"></span>
+  </div>
+  <!-- 
+    🍪🍪🍪
+    <br>
+    <button onclick="checkCookiesPolicy()">Check Cookies</button>
+    <button onclick="eraseCookiesPolicy()">Erase Cookies</button> 
+  -->
+  <div id="subscribe">
+    <span class="close" onclick="closeSubscriptionBox()"><img src="img/Close.svg"></span>
+    <span class="text">Get insider news before everyone else. Subscribe now.</span>
+    <input type="text" placeholder="Enter your email">
+    <span class="subtext">You may unsubscribe at any time.</span>
+  </div>
+  <script>
+    function openSubscriptionBox(){
+      document.getElementById('subscribe').style.display = 'block';
+    }
+    function closeSubscriptionBox(){
+      document.getElementById('subscribe').style.display = 'none';
+    }
+  </script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var tooltip = document.querySelectorAll('.soontooltip');
+    document.addEventListener('mousemove', fn, false);
+    function fn(e) {
+        for (var i=tooltip.length; i--;) {
+            tooltip[i].style.left = e.clientX + 'px';
+            tooltip[i].style.top = e.clientY + 'px';
+        }
+    }
+  </script>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.674, lng: -73.945},
+          zoom: 15,
+          disableDefaultUI: true,
+          styles: [
+            {
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#f5f5f5"
+                }
+              ]
+            },
+            {
+              "elementType": "labels.icon",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#616161"
+                }
+              ]
+            },
+            {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+                {
+                  "color": "#f5f5f5"
+                }
+              ]
+            },
+            {
+              "featureType": "administrative.land_parcel",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#bdbdbd"
+                }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#eeeeee"
+                }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#757575"
+                }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#e5e5e5"
+                }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#9e9e9e"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#ffffff"
+                }
+              ]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#757575"
+                }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#dadada"
+                }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#616161"
+                }
+              ]
+            },
+            {
+              "featureType": "road.local",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#9e9e9e"
+                }
+              ]
+            },
+            {
+              "featureType": "transit.line",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#e5e5e5"
+                }
+              ]
+            },
+            {
+              "featureType": "transit.station",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#eeeeee"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#c9c9c9"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "color": "#9e9e9e"
+                }
+              ]
+            }
+          ]
+        });
+      }
+  </script>
+  <!--Load the API from the specified URL
+  * The async attribute allows the browser to render the page while the API loads
+  * The key parameter will contain your own API key (which is not needed for this tutorial)
+  * The callback parameter executes the initMap() function
+  -->
+  <script defer
+  src="https://maps.googleapis.com/maps/api/js?key=KEYKEYKEY&callback=initMap">
+  </script>
+
+  <script>
+    function runner(){
+      console.log("Runner")
+      const cookiesPolicy = localStorage.getItem('cookiesPolicy');
+      if (cookiesPolicy === null){
+        console.log('no cookies')
+        document.getElementById('cookies').style.display = 'block';
+      } 
+      else if (cookiesPolicy === 'rejected'){
+        console.log('rejected cookies')
+      };
+    }
+    function cookiesRejected(){
+      console.log("Rejected")
+      localStorage.setItem('cookiesPolicy', 'rejected');
+    }
+    function cookiesAccepted(){
+      console.log("Accepted")
+      localStorage.setItem('cookiesPolicy', 'accepted');
+    }
+    function checkCookiesPolicy(){
+      const cookiesPolicy = localStorage.getItem('cookiesPolicy');
+      console.log(cookiesPolicy);
+    }
+    function eraseCookiesPolicy(){
+      localStorage.removeItem('cookiesPolicy');
+      console.log('Deleted cookiesPolicy');
+    }
+    function subscribePopClose(){
+      localStorage.setItem('subscribePop', 'close');
+    }
+    function menuMobile(){
+      var menu = document.getElementById('menu-mobile');
+      if (menu.style.display == 'none'){
+        menu.style.display = 'block';
+      }
+      else {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>
