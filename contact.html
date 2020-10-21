@@ -24,7 +24,11 @@
 </head>
 
 <body onload="runner();">
-
+<!--loader-->
+<div id="loader">
+  <div id="loader-bar"></div>
+</div>
+<!-- loader ends-->
   <!-- Add your site or application content here -->
   <div id="wrapper"></div>
     <div id="menu-mobile" style="display: none;">
@@ -76,34 +80,39 @@
       <div class="right"><a href="#">Privacy Policy</a></div>
     </footer>
   </div>
-  <!-- 
+  <!--
     🍪🍪🍪
     <br>
     <button onclick="cookiesRejected()">Reject</button>
-    <button onclick="cookiesAccepted()">Accept</button> 
+    <button onclick="cookiesAccepted()">Accept</button>
   -->
   <div id="cookies">
     <span class="text">If you continue to use our website, you agree to our use of <a href="#">cookies.</a></span>
     <span class="close" onclick="cookiesAccepted()"><img src="img/pico.svg"></span>
   </div>
-  <!-- 
+  <!--
     🍪🍪🍪
     <br>
     <button onclick="checkCookiesPolicy()">Check Cookies</button>
-    <button onclick="eraseCookiesPolicy()">Erase Cookies</button> 
+    <button onclick="eraseCookiesPolicy()">Erase Cookies</button>
   -->
+<div>
   <div id="subscribe">
     <span class="close" onclick="closeSubscriptionBox()"><img src="img/Close.svg"></span>
-    <span class="text">Get insider news before everyone else. Subscribe now.</span>
+    <span class="text">Explore the latest sounds, gigs and news before everyone else. First-time subscribers will get access to an exclusive audiovisual experience.</span>
     <input type="text" placeholder="Enter your email">
     <span class="subtext">You may unsubscribe at any time.</span>
   </div>
+  <span id="blur"></span>
+</div>
   <script>
     function openSubscriptionBox(){
       document.getElementById('subscribe').style.display = 'block';
+      document.getElementById('blur').style.display = 'block';
     }
     function closeSubscriptionBox(){
       document.getElementById('subscribe').style.display = 'none';
+      document.getElementById('blur').style.display = 'none';
     }
   </script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
@@ -305,7 +314,7 @@
       if (cookiesPolicy === null){
         console.log('no cookies')
         document.getElementById('cookies').style.display = 'block';
-      } 
+      }
       else if (cookiesPolicy === 'rejected'){
         console.log('rejected cookies')
       };
@@ -339,7 +348,44 @@
       }
     }
   </script>
+<!--loader script-->
+<script>
+  addEventListener('load', (event) => {
+    move();
+  });
 
+  let i = 0;
+  let width = 1;
+  let barContainer = document.getElementById("loader");
+
+  function move() {
+    if (i == 0) {
+      i = 1;
+
+      let bar = document.getElementById("loader-bar");
+      let id = setInterval(frame, 15);
+
+      function frame() {
+        if (width >= 100) {
+          barContainer.style.opacity = "0";
+          setTimeout(displayNone, 400);
+        } else if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          bar.style.width = width + "%";
+        }
+      }
+    }
+
+  }
+
+  function displayNone() {
+    barContainer.style.display = "none";
+  }
+
+</script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
