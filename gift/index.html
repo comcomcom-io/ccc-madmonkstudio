@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MAD MONK STUDIO</title>
+	<link rel="icon" type="image/png" href="favicon.png" sizes="20x20">
+
+	<title>Mad Monk Studios</title>
+	<style>
+		#p5_loading, .p5_loading {
+		  /* display: none; */
+		  z-index: 1020;
+		  position: fixed;
+		  left: 0;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  width: 100%;
+		  height: 100%;
+		  display: -webkit-flex;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  text-transform: uppercase;
+		  background:black;
+		}
+
+		body {
+		  margin:0;
+		  padding:0;
+		  width: 100%;
+		  height: 100vh;
+		  overflow: hidden;
+		  background: url('backgrounds/Background1.jpg');
+		  background-size: cover !important;
+		  background-position: center !important;
+		  background-repeat: no-repeat !important;
+		}
+
+		* {
+		  font-family: 'GerstnerProgramm-Regular', 'Helvetica', sans-serif;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 12px;
+		  letter-spacing: 2px;
+		}
+
+		canvas {
+		  margin:auto;
+		}
+
+		button {
+		  cursor: pointer;
+		  display: block;
+		  -webkit-appearance: none;
+		  background: transparent;
+		  color: white;
+		  border: solid 1px white;
+		  text-transform: uppercase;
+		  font-family: 'GerstnerProgramm-Regular';
+		  font-weight: normal;
+		  font-style: normal;
+		  padding: 5px 12px;
+		  border-radius: 50px;
+		}
+
+		.social {
+		  position: fixed;
+		  bottom: 20px;
+		  right: 20px;
+		  display: -webkit-flex;
+		  display: flex;
+		  align-items: center;
+		}
+
+		.social a {
+		  margin: 0 5px;
+		}
+
+		.social p {
+		  margin: 0 5px 0 0;
+		  opacity: .6;
+		}
+
+		#play {
+		  border: none;
+		  position: fixed;
+		  top: 30px;
+		  right: 30px;
+		  cursor: pointer;
+		}
+
+		#play img {
+		  width: 8px;
+		  margin-right: 2px;
+		}
+
+		#play:hover img {
+		  filter: invert(1);
+		}
+
+		button:focus {
+		  outline: 0;
+		}
+
+		button:hover {
+		  background: white;
+		  color: black;
+		}
+
+		#inputs, #button {
+		  position: fixed;
+		  top: 30px;
+		  left: 30px;
+		  z-index: 999;
+		}
+
+		#popup {
+		  display: none;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<button type="button" name="button" id="button" onclick="showInputs()">Customize</button>
+	<div id="inputs">
+		<button type="button" name="button" id="close" onclick="closeInputs()">&times;</button>
+
+		<div id="phrase">
+			<p>Text</p>
+		</div>
+
+		<div id="spacing">
+			<p>Spacing</p>
+		</div>
+
+		<div id="fontSize">
+			<p>Font Size</p>
+		</div>
+
+		<div id="density">
+			<p>Density</p>
+		</div>
+
+		<div id="speed">
+			<p>Speed</p>
+		</div>
+
+		<div id="spin">
+			<p>Auto Spin</p>
+		</div>
+
+		<div id="letterRotation">
+			<p>Manual Rotation<br><span>If Auto Spin is Off</span></p>
+		</div>
+	</div>
+
+	<div id="popup">
+		<p>to listen to the music, make sure your phone is on ring</p>
+		<button id="ringOn" type="button" name="button" onclick="ringOn()">Got it</button>
+	</div>
+
+	<div class="social">
+		<p>Follow us</p>
+		<a href="https://www.youtube.com/channel/UC8LQMGZw0hwd_EGOWDmPS3Q" target="_blank"><img src="images/Youtube.svg"></a>
+		<a href="https://www.instagram.com/madmonkstudios/" target="_blank"><img src="images/Instagram.svg"></a>
+		<a href="https://open.spotify.com/user/1wkbj6dtcqso6wc9ht7ilbwjs?si=zQNy7i88QfiJZ-s8JiTi7A" target="_blank"><img src="images/Spotify.svg"></a>
+	</div>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="js/sketch.js"></script>
+
+	<script type="text/javascript">
+		var btn = document.getElementById('button');
+		var inpts = document.getElementById('inputs');
+		var popUp = document.getElementById('popup');
+
+		function showInputs(){
+			inpts.classList.add("show");
+			btn.classList.add("hide");
+		}
+
+		function closeInputs(){
+			inpts.classList.remove("show");
+			btn.classList.remove("hide");
+		}
+
+		function ringOn(){
+			popUp.classList.add("hide");
+		}
+	</script>
+</body>
+</html>
