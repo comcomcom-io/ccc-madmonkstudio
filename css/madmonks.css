@@ -99,14 +99,16 @@ body {
     font-family: Panama;
     font-size: 16px;
 }
-#subscribe > .input-box{
-    display:flex;
+
+#subscribe > .input-box {
+    display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #000;
     height: 40px;
     width: 100%;
 }
-#subscribe > .input-box > input{
+
+#subscribe > .input-box > input {
     display: block;
     border: none;
     background-color: transparent;
@@ -119,12 +121,13 @@ body {
     opacity: .75;
 }
 
- #submitSubscription{
-    background-image:url("../img/right-arrow.svg");
+#submitSubscription {
+    background-image: url("../img/right-arrow.svg");
     background-repeat: no-repeat;
     background-size: auto;
-     cursor: pointer;
+    cursor: pointer;
 }
+
 #blur {
     position: fixed;
     display: none;
@@ -338,6 +341,11 @@ body {
 
     header > .nav > .logo > img {
         height: 100%;
+
+    }
+
+    .logo > a > img {
+        width: 318px;
     }
 
     header > .nav > .burguer {
@@ -719,7 +727,9 @@ body {
 
     header > .nav > .logo > img {
         height: 100%;
+
     }
+
 
     header > .nav > .burguer {
         display: none;
