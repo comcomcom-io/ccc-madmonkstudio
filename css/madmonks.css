@@ -265,6 +265,8 @@ body {
 }
 
 
+
+
 @media only screen and (max-width: 768px) {
 
     #menu-mobile {
@@ -298,17 +300,18 @@ body {
 
     #menu-mobile > .close {
         display: block;
-        height: 20px;
-        width: 20px;
+        height: 22px;
+        width: 23px;
         position: absolute;
-        right: 10px;
-        top: 11px;
+        right: 8px;
+        top: -32px;
+        background-color: #fff;
     }
 
     #menu-mobile > .close > img {
         width: 12px;
         position: absolute;
-        padding: 4px;
+        padding: 5px;
         top: 0;
     }
 
@@ -334,9 +337,9 @@ body {
     header > .nav > .logo {
         display: inline-flex;
         width: auto;
-        height: 12px;
+        height: 13px;
         margin: 0 auto;
-        margin-top: 16px;
+        margin-top: 7px;
     }
 
     header > .nav > .logo > img {
@@ -706,6 +709,8 @@ body {
 
 
 }
+
+
 
 @media only screen and (min-width: 769px) {
 
@@ -1083,4 +1088,24 @@ body {
         border-bottom: 1px solid #000;
     }
 
+}
+
+
+@media only screen and (max-width: 320px) {
+    header > .nav > .logo {
+        display: inline-flex;
+        width: auto;
+        height: 13px;
+        margin: 0 auto;
+        margin-top: 8px;
+    }
+
+    header > .nav > .logo > img {
+        height: 100%;
+
+    }
+
+    .logo > a > img {
+        width: 260px;
+    }
 }
