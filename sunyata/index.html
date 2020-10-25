@@ -131,13 +131,14 @@
 			height: 100%;
 			position: fixed;
 			z-index: 10000;
-			background-color: #000;
+			background-color: rgba(0,0,0,.5);
+			backdrop-filter: blur(30px);
 		}
 		#wall .box{
 			display: block;
 			position: fixed;
 			background-color: #f2f2f2;
-			height: 130px;
+			height: 140px;
 			width: 400px;
 			margin: auto;
 			top: 0;
@@ -147,6 +148,8 @@
 			color: #000;
 			padding: 22px;
 			box-sizing: border-box;
+			text-transform: uppercase;
+			text-align: center;
 		}
 		#wall .box input{
 			display: block;
@@ -164,6 +167,18 @@
 		}
 		#wall .box .message{
 			color: red;
+		}
+		#wall .box button{
+			margin: 0 auto;
+			border-color: #000;
+			color: #000;
+		}
+		#wall .box button:hover{
+			background-color:#000;
+			color: #fff;
+		}
+		#wall .box input{
+			text-align: center;
 		}
 	</style>
 	<script>
