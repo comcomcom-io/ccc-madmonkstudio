@@ -517,6 +517,7 @@ body {
         padding: 0px 10px;
         overflow: hidden;
         font-size: 10px;
+        text-transform: uppercase !important;
     }
 
     footer > .left, footer > .right {
