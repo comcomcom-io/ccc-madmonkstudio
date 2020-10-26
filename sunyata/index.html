@@ -125,6 +125,11 @@
 </head>
 <body>
 	<style>
+		@media only screen and (max-width: 768px){
+			#wall{
+				background-color: rgba(0,0,0,1);
+			}
+		}
 		#wall{
 			display: block;
 			width: 100%;
@@ -163,7 +168,7 @@
 			background-color: transparent;
 			color: #000;
 			margin-top: 10px;
-			margin-bottom: 8px;
+			margin-bottom: 14px;
 		}
 		#wall .box .message{
 			color: red;
@@ -177,9 +182,35 @@
 			background-color:#000;
 			color: #fff;
 		}
-		#wall .box input{
+		#wall .box #code{
 			text-align: center;
 			text-transform: uppercase;
+			padding-right: 0px;
+		}
+		#wall .box #error{
+			display: block;
+			width: 100%;
+			height: 24px;
+			text-align: center;
+			opacity: 1;
+			pointer-events: none;
+			line-height: 24px;
+			margin-bottom: 12px;
+			font-size: 10px;
+			pointer-events: none;
+			opacity: 0;
+			color: transparent;
+			position: absolute;
+			left: 0;
+			bottom: -36px;
+		}
+		#wall .box #error.on{
+			color: #EB5757;
+			opacity: 1;
+		}
+		#wall .box #code.error{
+			border-bottom-color: #EB5757;
+			color: #EB5757;
 		}
 		#wall .bottom{
 			display: block;
@@ -187,19 +218,22 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			height: 26px;
+			height: 40px;
 			background-color: #000;
 			color: #fff;
 			text-align: center;
-			line-height: 26px;
+			line-height: 40px;
+			text-transform: uppercase;
 		}
 	</style>
 	<script>
 
 		function inputCode(){
 			var code = document.getElementById('code').value
-			if (code != 'axismundi'){
+			if (code != 'AXISMUNDI'){
 				console.log('error');
+				document.getElementById('code').classList.add('error');
+				document.getElementById('error').classList.add('on');
 			}
 			else {
 				document.getElementById('wall').style.display = 'none';
@@ -207,15 +241,17 @@
 		}
 
 	</script>
+
+	
 	<div id="wall">
-		<div class="box">
-			Enter your code:
+		<div class="box">Enter your code
 				<input id="code" type="password" placeholder="Your Code"/>
-				<button type="submit" onclick="inputCode()">Enter</button>
+				<div id="error">Your password is incorrect</div>
+				<button type="submit" onclick="inputCode()">Submit</button>
 			<!-- <div class="message">Your code doesnt exist</div> -->
 		</div>
 		<div class="bottom">
-			To enter please subscribe to our newsletter
+			To enter visit madmonkstudios.com and subcribe to our newsletter
 		</div>
 	</div>
 	<button type="button" name="button" id="button" onclick="showInputs()">Customize</button>
