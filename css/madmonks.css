@@ -40,10 +40,12 @@ body {
     color: #fff;
     z-index: 100;
     height: 40px;
-    width: 524px;
+    width: 580px;
     line-height: 40px;
     padding: 0px 16px;
-    font-size: 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #cookies a {
@@ -55,8 +57,8 @@ body {
     position: absolute;
     right: 16px;
     top: 14px;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
 }
 
 #cookies .close img {
@@ -1086,6 +1088,14 @@ body {
 
     #about > .comp-four > .left > img {
         border-bottom: 1px solid #000;
+    }
+
+    #cookies {
+        height: inherit;
+        width: auto;
+        line-height: 1.2;
+        padding: 16px 16px;
+        font-size: 16px;
     }
 
 }
