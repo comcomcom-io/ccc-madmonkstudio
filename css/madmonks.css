@@ -364,6 +364,9 @@ body {
         height: 18px;
         line-height: 18px;
     }
+    #menu-mobile .icon{
+        margin-right: 4px;
+    }
 
     header {
         width: 100%;
