@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MAD MONK STUDIO</title>
+	<title>MAD MONK STUDIOS</title>
 	<link rel="icon" type="image/png" href="favicon.png" sizes="20x20">
 
 	<title>Mad Monk Studios</title>
@@ -125,11 +125,6 @@
 </head>
 <body>
 	<style>
-		@media only screen and (max-width: 768px){
-			#wall{
-				background-color: rgba(0,0,0,1);
-			}
-		}
 		#wall{
 			display: block;
 			width: 100%;
@@ -224,6 +219,21 @@
 			line-height: 40px;
 			text-transform: uppercase;
 		}
+
+		@media only screen and (max-width: 768px){
+			#wall{
+				background-color: rgba(0,0,0,1);
+			}
+
+			.box {
+				max-width: 90%;
+			}
+
+			#wall .bottom {
+				line-height: normal;
+				margin-bottom: 10px;
+			}
+		}
 	</style>
 	<script>
 
@@ -250,7 +260,7 @@
 			<!-- <div class="message">Your code doesnt exist</div> -->
 		</div>
 		<div class="bottom">
-			To enter visit madmonkstudios.com and subcribe to our newsletter
+			To enter visit <a href="https://madmonkstudios.com">madmonkstudios.com</a> and subcribe to our newsletter
 		</div>
 	</div>
 	<button type="button" name="button" id="button" onclick="showInputs()">Customize</button>
