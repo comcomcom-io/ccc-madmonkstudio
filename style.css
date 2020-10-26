@@ -35,6 +35,14 @@ body, html, .grid {
   z-index: 1001;
 }
 
+.show-for-mobile {
+  display: none;
+}
+
+.hide-for-mobile {
+  display: block;
+}
+
 a {
   text-decoration: none;
   font-size: 12px;
@@ -96,12 +104,18 @@ img {
 @media screen and (max-width: 768px) {
   .box {
     width: calc(25% + 1px);
-    height: 20%;
+    height: 10%;
   }
 
   .box img {
     opacity: 1 !important;
   }
+
+  .show-for-mobile {
+    display: block;
+  }
+
+  .hide-for-mobile {
+    display: none;
+  }
 }
-
-
