@@ -364,8 +364,14 @@ body {
         height: 18px;
         line-height: 18px;
     }
+    .socials{
+        margin-top: 16px;
+    }
     #menu-mobile .icon{
-        margin-right: 4px;
+        margin-right: 8px;
+    }
+    #menu-mobile .icon img{
+        height: 16px;
     }
 
     header {
