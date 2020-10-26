@@ -85,15 +85,19 @@ body {
 #subscribe > .close {
     display: block;
     position: absolute;
-    height: 14px;
-    width: 14px;
+    height: 13px;
+    width: 13px;
     right: 16px;
     top: 16px;
     cursor: pointer;
+    opacity: .5;
+}
+#subscribe > .close:hover{
+    opacity: 1;
 }
 
 #subscribe > .close img {
-    width: 14px;
+    width: 13px;
     margin-top: -10px;
 }
 
@@ -116,6 +120,10 @@ body {
     background-color: transparent;
     background-position: 50% 50%;
     outline: none !important;
+    width: 95%;
+}
+#subscribe > .input-box > input.arrow {
+    width: 5%;
 }
 
 #subscribe > .subtext {
