@@ -43,7 +43,7 @@ body {
     width: 524px;
     line-height: 40px;
     padding: 0px 16px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #cookies a {
@@ -885,13 +885,13 @@ body {
 
     footer > .left, footer > .right {
         width: 50%;
+        font-size: 13px;
+        text-transform: uppercase;
     }
 
     footer > .right {
         text-align: right;
         opacity: .5;
-        text-transform: uppercase;
-        font-size: 14px;
     }
 
 
