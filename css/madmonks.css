@@ -176,6 +176,34 @@ body {
     color: #ffffff;
 }
 
+#loader img {
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    animation-name: flicker;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
 #about > .comp-one {
     display: block;
     width: 100%;
