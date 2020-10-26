@@ -367,6 +367,7 @@
     function cookiesAccepted(){
       console.log("Accepted")
       localStorage.setItem('cookiesPolicy', 'accepted');
+      document.getElementById('cookies').style.display = 'none';
     }
     function checkCookiesPolicy(){
       const cookiesPolicy = localStorage.getItem('cookiesPolicy');
