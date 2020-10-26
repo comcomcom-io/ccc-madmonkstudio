@@ -1,0 +1,274 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+    <meta charset="utf-8">
+    <title>MAD MONK STUDIO — THE STUDIO</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flickity.css">
+    <link rel="stylesheet" href="css/madmonks.css">
+
+    <style>
+		#p5_loading, .p5_loading {
+		  /* display: none; */
+		  z-index: 1020;
+		  position: fixed;
+		  left: 0;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  width: 100%;
+		  height: 100%;
+		  display: -webkit-flex;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  text-transform: uppercase;
+		  background:black;
+		}
+
+		body {
+		  margin:0;
+		  padding:0;
+		  width: 100%;
+		  height: 100vh;
+		  overflow: hidden;
+		  background: url('backgrounds/Background1.jpg');
+		  background-size: cover !important;
+		  background-position: center !important;
+		  background-repeat: no-repeat !important;
+		}
+
+		* {
+		  font-family: 'GerstnerProgramm-Regular', 'Helvetica', sans-serif;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 12px;
+		  letter-spacing: 2px;
+		}
+
+		canvas {
+		  margin:auto;
+		}
+
+		button {
+		  cursor: pointer;
+		  display: block;
+		  -webkit-appearance: none;
+		  background: transparent;
+		  color: white;
+		  border: solid 1px white;
+		  text-transform: uppercase;
+		  font-family: 'GerstnerProgramm-Regular';
+		  font-weight: normal;
+		  font-style: normal;
+		  padding: 5px 12px;
+		  border-radius: 50px;
+		}
+
+		.social {
+		  position: fixed;
+		  bottom: 20px;
+		  right: 20px;
+		  display: -webkit-flex;
+		  display: flex;
+		  align-items: center;
+		}
+
+		.social a {
+		  margin: 0 5px;
+		}
+
+		.social p {
+		  margin: 0 5px 0 0;
+		  opacity: .6;
+		}
+
+		#play {
+		  border: none;
+		  position: fixed;
+		  top: 30px;
+		  right: 30px;
+		  cursor: pointer;
+		}
+
+		#play img {
+		  width: 8px;
+		  margin-right: 2px;
+		}
+
+		#play:hover img {
+		  filter: invert(1);
+		}
+
+		button:focus {
+		  outline: 0;
+		}
+
+		button:hover {
+		  background: white;
+		  color: black;
+		}
+
+		#inputs, #button {
+		  position: fixed;
+		  top: 30px;
+		  left: 30px;
+		  z-index: 999;
+		}
+
+		#popup {
+		  display: none;
+		}
+	</style>
+	<link rel="stylesheet" href="sunyata/style.css">
+
+    <meta name="theme-color" content="#fafafa">
+    <link rel="icon" 
+        type="image/png" 
+        href="favicon.png">
+    </head>
+    <body>
+
+        <style>
+            #wall{
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                z-index: 10000;
+                background-color: #000;
+            }
+            #wall .box{
+                display: block;
+                position: fixed;
+                background-color: #f2f2f2;
+                height: 120px;
+                width: 300px;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                color: #000;
+                padding: 22px;
+                box-sizing: border-box;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            #wall .box input{
+                display: block;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #000;
+                display: block;
+                width: 100%;
+                padding: 10px 20px 10px 0px;
+                box-sizing: border-box;
+                background-color: transparent;
+                color: #000;
+                margin-top: 10px;
+                margin-bottom: 14px;
+            }
+            #wall .box .message{
+                color: #EB5757;
+            }
+            #wall .box button{
+                margin: 0 auto;
+                border-color: #000;
+                color: #000;
+                margin-top: 18px;
+                cursor: pointer;
+            }
+            #wall .box button:hover{
+                background-color:#000;
+                color: #fff;
+            }
+            #wall .box #code{
+                text-align: center;
+                text-transform: uppercase;
+                padding-right: 0px;
+            }
+            #wall .box #error{
+                display: block;
+                width: 100%;
+                height: 24px;
+                text-align: center;
+                opacity: 1;
+                pointer-events: none;
+                line-height: 24px;
+                margin-bottom: 12px;
+                font-size: 10px;
+                pointer-events: none;
+                opacity: 0;
+                color: transparent;
+                position: absolute;
+                left: 0;
+                bottom: -36px;
+            }
+            #wall .box #error.on{
+                color: #EB5757;
+                opacity: 1;
+            }
+            #wall .box #code.error{
+                border-bottom-color: #EB5757;
+                color: #EB5757;
+            }
+            #wall .bottom{
+                display: block;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 40px;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+                text-transform: uppercase;
+            }
+    
+            @media only screen and (max-width: 768px){
+                #wall{
+                    background-color: rgba(0,0,0,1);
+                }
+    
+                .box {
+                    max-width: 90%;
+                }
+    
+                #wall .bottom {
+                    line-height: normal;
+                    margin-bottom: 10px;
+                }
+            }
+        </style>
+
+
+        <div id="wall">
+            <div class="box">
+                <span style="color: #000">Thank you for subscribing to Madm Monk Studios</span>
+                <button type="submit" onclick="goBack()">Go back</button>
+            </div>
+        </div>
+
+
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
+    </body>
+</html>
