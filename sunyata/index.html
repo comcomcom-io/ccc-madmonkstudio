@@ -179,17 +179,30 @@
 		}
 		#wall .box input{
 			text-align: center;
+			text-transform: uppercase;
+		}
+		#wall .bottom{
+			display: block;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 26px;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			line-height: 26px;
 		}
 	</style>
 	<script>
 
 		function inputCode(){
 			var code = document.getElementById('code').value
-			if (code != 'MMSSE1020'){
+			if (code != 'axismundi'){
 				console.log('error');
 			}
 			else {
-				console.log('success')
+				document.getElementById('wall').style.display = 'none';
 			}
 		}
 
@@ -200,6 +213,9 @@
 				<input id="code" type="password" placeholder="Your Code"/>
 				<button type="submit" onclick="inputCode()">Enter</button>
 			<!-- <div class="message">Your code doesnt exist</div> -->
+		</div>
+		<div class="bottom">
+			To enter please subscribe to our newsletter
 		</div>
 	</div>
 	<button type="button" name="button" id="button" onclick="showInputs()">Customize</button>
