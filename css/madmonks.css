@@ -714,10 +714,24 @@ body {
         width: auto;
         line-height: 1.2;
         padding: 16px 16px;
-        font-size: 16px;
     }
 
+    #cookies .close {
+        display: -webkit-flex;
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
 
+    #cookies .close img {
+        width: 12px;
+        margin-top: 0;
+    }
 }
 
 
