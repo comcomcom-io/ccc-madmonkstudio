@@ -556,12 +556,13 @@ body {
         box-sizing: border-box;
         padding: 0px 10px;
         overflow: hidden;
-        font-size: 10px;
+        font-size: 12px;
         text-transform: uppercase !important;
+        justify-content: space-between;
     }
 
     footer > .left, footer > .right {
-        width: 50%;
+        width: inherit;
     }
 
     footer > .right {
@@ -598,6 +599,10 @@ body {
         margin-bottom: 50px;
     }
 
+    #contact > .left > .info-block:last-child {
+        margin-bottom: 0;
+    }
+
     #contact > .left > .info-block > h1 {
         font-size: 26px;
         font-weight: normal;
@@ -616,7 +621,7 @@ body {
         font-family: Panama;
         line-height: 24px;
         padding: 0px;
-        margin: 0px;
+        margin: 10px 0;
         width: 100%;
         position: relative;
     }
@@ -665,10 +670,10 @@ body {
 
     #about > .comp-one > .hero > .top > .subcopy {
         max-width: 720px;
-        margin: 0px auto 48px;
+        margin: 10px auto 48px;
         font-size: 26px;
         text-align: center;
-        line-height: 31px;
+        line-height: 100%;
         font-family: Panama;
     }
 
@@ -738,12 +743,12 @@ body {
     }
 
     #about > .comp-three > .left > h2 {
-        font-size: 26px;
+        font-size: 20px;
         font-weight: normal;
         letter-spacing: .5px;
         margin: 0;
         padding: 0;
-        line-height: 28px;
+        line-height: 100%;
     }
 
     #about > .comp-three > .right > p {
