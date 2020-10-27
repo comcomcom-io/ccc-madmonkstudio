@@ -42,7 +42,7 @@ body {
     bottom: 0px;
     background-color: #000;
     color: #fff;
-    z-index: 100;
+    z-index: 1010;
     height: 40px;
     width: 580px;
     line-height: 40px;
