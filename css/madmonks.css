@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5, h5 {
 
 .medium {
   font-size: 1.618rem;
+  line-height: 120%;
 }
 
 .medium-large {
@@ -405,7 +406,7 @@ p.status {
   color: #9B2529;
 }
 
-.s-main h2, .s-main p {
+.s-main h2, .s-main p, .session-info h1, .session-info p {
   text-align: center;
   margin: 0;
 }
@@ -415,7 +416,7 @@ p.status {
   color: white;
 }
 
-.s-main p {
+.s-main p, .session-info p {
   -webkit-transform: translateY(-24px);
   -moz-transform: translateY(-24px);
   -o-transform: translateY(-24px);
@@ -455,6 +456,32 @@ p.status {
   -moz-transform: translateX(50%) translateY(-20%) scaleY(1);
   -o-transform: translateX(50%) translateY(-20%) scaleY(1);
   transform: translateX(50%) translateY(-20%) scaleY(1); */
+}
+
+/* Video */
+
+#video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+#video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.session-info {
+  padding: 40px 0;
+}
+
+.session-info p {
+  display: block;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 960px) {
