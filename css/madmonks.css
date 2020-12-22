@@ -647,6 +647,7 @@ span.info span.medium {
 .half {
   width: 50%;
   position: relative;
+  padding: .5px;
 }
 
 .padding {
@@ -699,6 +700,10 @@ span.info span.medium {
   }
   .large {
     font-size: 2.236rem;
+  }
+  .medium-large {
+    font-size: 1.618rem;
+    line-height: 108%;
   }
   .fixed-mobile {
     display: block;
@@ -1076,12 +1081,8 @@ span.info span.medium {
     clear: both;
   }
   #about>.comp-three>.left>h2 {
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: .5px;
     margin: 0;
     padding: 0;
-    line-height: 100%;
   }
   #about>.comp-three>.right>p {
     margin: 0;
@@ -1193,6 +1194,23 @@ span.info span.medium {
   }
   .half {
     width: 100%;
+  }
+  .project {
+    width: 100%;
+    border-right: 0 !important;
+  }
+  .p-thumb {
+    opacity: 1;
+  }
+  .half .social-share {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+  .half .social-share li {
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 16px;
   }
 }
 
