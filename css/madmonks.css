@@ -428,7 +428,11 @@ img {
 }
 
 p.status {
-  color: #9B2529;
+  color: black;
+  background: deepskyblue;
+  padding: 4px 16px 0 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .s-main h2, .s-main p, .session-info h1, .session-info p {
@@ -788,7 +792,6 @@ span.info span.medium {
     position: fixed;
     z-index: 1000;
     top: 40px;
-    padding: 8px;
     box-sizing: border-box;
     border-bottom: 1px solid #000;
   }
@@ -802,10 +805,20 @@ span.info span.medium {
   #menu-mobile>ul>li {
     text-transform: uppercase;
     letter-spacing: .5px;
+    border-bottom: solid 1px #000;
   }
-  /* #menu-mobile > ul > li span.subscribe {
+  #menu-mobile>ul>li.socials {
+    border-bottom: none;
+    padding-bottom: 16px;
+    padding-left: 8px;
+  }
+  #menu-mobile>ul>li>a, #menu-mobile>ul>li>span.disabled, #menu-mobile>ul>li>span.subscribe {
+    display: block;
+    padding: 8px;
+  }
+  #menu-mobile > ul > li span.subscribe {
     background-color: #f1f2f2;
-  } */
+  }
   #menu-mobile>ul>li>span.disabled>.menuitem {
     opacity: .25;
   }
@@ -823,6 +836,7 @@ span.info span.medium {
     position: absolute;
     padding: 5px;
     top: 0;
+    box-sizing: content-box;
   }
   #menu-mobile>ul>li span.mobiletooltip {
     background: black;
