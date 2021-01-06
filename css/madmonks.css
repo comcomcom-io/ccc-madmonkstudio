@@ -83,6 +83,21 @@ p {
   text-transform: uppercase;
 }
 
+::placeholder {
+  opacity: .35;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  opacity: .35;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  opacity: .35;
+}
+
 .flex {
   display: -webkit-flex;
   display: flex;
@@ -159,7 +174,7 @@ img {
   background-color: #f2f2f2;
   z-index: 1003;
   height: auto;
-  max-height: 220px;
+  max-height: 200px;
   width: 500px;
   box-sizing: border-box;
   padding: 36px 22px 36px 24px;
@@ -188,7 +203,9 @@ img {
 
 #subscribe>.text {
   font-family: 'Panama', serif;
-  font-size: 16px;
+  font-size: 20px;
+  display: block;
+  line-height: 1.2;
 }
 
 #subscribe>.input-box {
@@ -201,6 +218,7 @@ img {
 
 #subscribe>.input-box>input {
   display: block;
+  font-size: 20px;
   border: none;
   background-color: transparent;
   background-position: 50% 50%;
@@ -213,8 +231,16 @@ img {
 }
 
 #subscribe>.subtext {
+  display: block;
+  font-family: 'Gerstner', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  opacity: .5;
+  text-transform: none;
   font-size: 12px;
-  opacity: .75;
+  line-height: 1.1;
+  margin-top: .5rem;
+  letter-spacing: .25px;
 }
 
 #submitSubscription {
@@ -816,7 +842,7 @@ span.info span.medium {
     display: block;
     padding: 8px;
   }
-  #menu-mobile > ul > li span.subscribe {
+  #menu-mobile>ul>li span.subscribe {
     background-color: #f1f2f2;
   }
   #menu-mobile>ul>li>span.disabled>.menuitem {
@@ -1427,16 +1453,16 @@ span.info span.medium {
   header>.menu>ul>li>span.icon {
     height: 16px;
     position: relative;
-    margin-right: 12px;
+    margin-right: 22px;
   }
   header>.menu>ul>li>span.icon img {
     height: 16px;
     position: relative;
     /* margin-top: -4px; */
   }
-  header>.menu>ul>li>span.icon:nth-child(2) {
+  /* header>.menu>ul>li>span.icon:nth-child(2) {
     margin-right: 9px;
-  }
+  } */
   header>.menu>ul>li>span.icon:last-child {
     margin-right: 0px;
   }
