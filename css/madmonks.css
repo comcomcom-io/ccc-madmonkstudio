@@ -463,6 +463,8 @@ p.status {
   padding: 4px 16px 0 16px;
   border-radius: 16px;
   margin-bottom: 16px;
+  font-size: 15px;
+  margin-top: -3px;
 }
 
 .s-main h2, .s-main p, .session-info h1, .session-info p {
