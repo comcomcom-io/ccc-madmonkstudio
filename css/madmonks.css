@@ -857,6 +857,7 @@ span.info span.medium {
     border-bottom: none;
     padding-bottom: 16px;
     padding-left: 8px;
+    flex-basis: 50%;
   }
   #menu-mobile>ul>li>a, #menu-mobile>ul>li>span.disabled, #menu-mobile>ul>li>span.subscribe {
     display: block;
