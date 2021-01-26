@@ -3,14 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MAD MONK STUDIOS — LIVE SESSIONS</title>
+  <title>MAD MONK STUDIOS — MAD RITES</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:url" content="https://www.madmonkstudios.com">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mad Monk Studios">
-  <meta property="og:description" content="Mad Monk Studios® explores the heights of transcendence through music production and audiovisual experiences.">
+  <meta property="og:description"
+    content="Mad Monk Studios® explores the heights of transcendence through music production and audiovisual experiences.">
   <meta property="og:image:type" content="image/jpg">
   <meta property="og:image" content="https://madmonkstudios.com/img/mms-og.jpg">
   <meta property="og:image:width" content="600">
@@ -26,85 +27,99 @@
   <link rel="stylesheet" href="css/madmonks.css">
 
   <meta name="theme-color" content="#fafafa">
-  <link rel="icon" 
-      type="image/png" 
-      href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body onload="runner();">
-<!--loader-->
-<div id="loader">
-  <div id="loader-bar"></div>
-  <img src="img/MMS-Icon.svg" alt="">
-</div>
-<!-- loader ends-->
+  <!--loader-->
+  <div id="loader">
+    <div id="loader-bar"></div>
+    <img src="img/MMS-Icon.svg" alt="">
+  </div>
+  <!-- loader ends-->
   <!-- Add your site or application content here -->
   <div id="wrapper"></div>
-    <div id="menu-mobile" style="display: none;">
+  <div id="menu-mobile" style="display: none;">
+    <ul>
+      <!-- <li><span class="disabled soon"><span class="menuitem">Live Sessions</span> <span class="soontooltip mobiletooltip">SOON!</span></span></li> -->
+      <li><a href="live-sessions.html">Mad Rites</a></li>
+      <li><span class="disabled soon"><span class="menuitem">Projects</span> <span
+            class="soontooltip mobiletooltip">SOON!</span> </span></li>
+      <li><a href="about.html">The Studio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><span class="subscribe" onclick="manualOpenSubscriptionBox()">Subscribe</span></li>
+      <li class="socials">
+        <span class="icon"><a href="https://www.instagram.com/madmonkstudios/" target="_blank"><img
+              src="img/ig.svg"></a></span>
+        <span class="icon"><a href="https://www.youtube.com/channel/UC8LQMGZw0hwd_EGOWDmPS3Q" target="_blank"><img
+              src="img/yt.svg"></a></span>
+        <span class="icon"><a href="https://open.spotify.com/user/1wkbj6dtcqso6wc9ht7ilbwjs?si=Py8aIXxbRvW-E4CCGGWdxA"
+            target="_blank"><img src="img/spot.svg"></a></span>
+      </li>
+    </ul>
+    <div class="close" onclick="menuMobile()"><img src="img/Cerrar.svg" /></div>
+  </div>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <a href="index.html" class="logo-d"><img src="img/logo.svg"></a>
+        <a href="index.html" class="logo-m"><img src="img/Logo-2.svg"></a>
+      </div>
+      <div class="burguer" onclick="menuMobile()"><img src="img/burguer.svg" /></div>
+    </div>
+    <div class="menu">
       <ul>
-        <!-- <li><span class="disabled soon"><span class="menuitem">Live Sessions</span><span class="soontooltip">SOON!</span></span></li> -->
+        <!-- <li><span class="disabled soon"><span class="menuitem">Live Sessions</span><span
+              class="soontooltip">SOON!</span></span></li> -->
         <li><a href="live-sessions.html">Mad Rites</a></li>
-        <li><span class="disabled soon"><span class="menuitem">Projects</span> <span class="soontooltip mobiletooltip">SOON!</span> </span></li>
+        <li><span class="disabled soon"><span class="menuitem">Projects</span><span
+              class="soontooltip">SOON!</span></span></li>
         <li><a href="about.html">The Studio</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><span class="subscribe" onclick="manualOpenSubscriptionBox()">Subscribe</span></li>
-        <li class="socials">
-          <span class="icon"><a href="https://www.instagram.com/madmonkstudios/" target="_blank"><img src="img/ig.svg"></a></span>
-          <span class="icon"><a href="https://www.youtube.com/channel/UC8LQMGZw0hwd_EGOWDmPS3Q" target="_blank"><img src="img/yt.svg"></a></span>
-          <span class="icon"><a href="https://open.spotify.com/user/1wkbj6dtcqso6wc9ht7ilbwjs?si=Py8aIXxbRvW-E4CCGGWdxA" target="_blank"><img src="img/spot.svg"></a></span>
+        <li><span class="icon">
+            <a href="https://www.instagram.com/madmonkstudios/" target="_blank"><img src="img/ig.svg"></a></span><span
+            class="icon">
+            <a href="https://www.youtube.com/channel/UC8LQMGZw0hwd_EGOWDmPS3Q" target="_blank"><img
+                src="img/yt.svg"></a></span><span class="icon">
+            <a href="https://open.spotify.com/user/1wkbj6dtcqso6wc9ht7ilbwjs?si=Py8aIXxbRvW-E4CCGGWdxA"
+              target="_blank"><img src="img/spot.svg"></a></span>
         </li>
       </ul>
-      <div class="close" onclick="menuMobile()"><img src="img/Cerrar.svg"/></div>
     </div>
-    <header>
-      <div class="nav">
-        <div class="logo">
-          <a href="index.html" class="logo-d"><img src="img/logo.svg"></a>
-          <a href="index.html" class="logo-m"><img src="img/Logo-2.svg"></a>
-        </div>
-        <div class="burguer" onclick="menuMobile()"><img src="img/burguer.svg" /></div>
+  </header>
+    <div id="session-detail">
+      <div id="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k-zC8h0Yl3I" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
-      <div class="menu">
-        <ul>
-          <!-- <li><span class="disabled soon"><span class="menuitem">Live Sessions</span><span class="soontooltip">SOON!</span></span></li> -->
-          <li><a href="live-sessions.html">Mad Rites</a></li>
-          <li><span class="disabled soon"><span class="menuitem">Projects</span><span class="soontooltip">SOON!</span></span></li>
-          <li><a href="about.html">The Studio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><span class="subscribe" onclick="manualOpenSubscriptionBox()">Subscribe</span></li>
-          <li><span class="icon">
-            <a href="https://www.instagram.com/madmonkstudios/" target="_blank"><img src="img/ig.svg"></a></span><span class="icon">
-            <a href="https://www.youtube.com/channel/UC8LQMGZw0hwd_EGOWDmPS3Q" target="_blank"><img src="img/yt.svg"></a></span><span class="icon">
-            <a href="https://open.spotify.com/user/1wkbj6dtcqso6wc9ht7ilbwjs?si=Py8aIXxbRvW-E4CCGGWdxA" target="_blank"><img src="img/spot.svg"></a></span>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <div id="content">
-      <div id="live-sessions">
 
-        <!-- Session Module -->
-        <a href="bahia-de-ascenso.html" class="session-module temp">
-          <div class="s-img">
-            <img src="img/bahia-de-ascenso.jpg" alt="">
-          </div>
-          <div class="s-top">
-            <p class="fecha">27.01.2021</p>
-            <!-- <p class="status"></p> -->
-            <p class="location">CDMX, MX</p>
-          </div>
-          <div class="s-main">
-            <h2 class="large">Bahía de Ascenso</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-              texts.</p>
-          </div>
-        </a>
+      <div class="session-info">
+         <h1 class="large">Bahía de Ascenso</h1>
+         <p class="medium">Far far away, behind the word mountains, far from the countries.</p>
+      </div>
+
+      <div class="session-desc">
+        <div class="right">
+          <ul class="social-share">
+            <li><a href="https://open.spotify.com/artist/5O7oQ2n5uqx9KqBadE27Dt?si=XglPn5ciTGqVSlrL-5z7-Q" target="_blank"><img src="img/Spotify.svg" alt="Spotify"></a></li>
+            <li><a href="https://www.instagram.com/bahiadeascenso/" target="_blank"><img src="img/ig.svg" alt=""></a></li>
+          </ul>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
+            Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which
+            roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it
+            is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to
+            leave
+            for the far World of Grammar.</p>
+        </div>
       </div>
     </div>
-    <footer>
-      <div class="left">®2020. madmonkstudios.com</div>
-      <div class="right"><a href="#">Privacy Policy</a></div>
-    </footer>
+  <footer>
+    <div class="left">®2020. madmonkstudios.com</div>
+    <div class="right"><a href="#">Privacy Policy</a></div>
+  </footer>
   </div>
   <!--
     🍪🍪🍪
@@ -130,13 +145,8 @@
         <span class="close" onclick="closeSubscriptionBox()"><img src="img/Close-Black.svg"></span>
         <span class="text">Explore the latest sounds, gigs and news before everyone else.</span>
         <div class="input-box">
-          <input type="email"
-                 autocapitalize="off"
-                 autocorrect="off"
-                 placeholder="Enter your email"
-                 name="MERGE0"
-                 id="MERGE0"
-                 value="">
+          <input type="email" autocapitalize="off" autocorrect="off" placeholder="Enter your email" name="MERGE0"
+            id="MERGE0" value="">
 
           <input class="arrow" type="submit" value="" id="submitSubscription">
         </div>
@@ -147,17 +157,17 @@
   </div>
 
   <script>
-    function manualOpenSubscriptionBox(){
+    function manualOpenSubscriptionBox() {
       document.getElementById('subscribe').style.display = 'block';
       document.getElementById('blur').style.display = 'block';
       document.getElementById('subscribe').style.left = '0px';
       document.getElementById('subscribe').style.top = '0px';
     }
-    function openSubscriptionBox(){
+    function openSubscriptionBox() {
       document.getElementById('subscribe').style.display = 'block';
       document.getElementById('blur').style.display = 'block';
     }
-    function closeSubscriptionBox(){
+    function closeSubscriptionBox() {
       document.getElementById('subscribe').style.display = 'none';
       document.getElementById('blur').style.display = 'none';
     }
@@ -170,52 +180,52 @@
     var tooltip = document.querySelectorAll('.soontooltip');
     document.addEventListener('mousemove', fn, false);
     function fn(e) {
-        for (var i=tooltip.length; i--;) {
-            tooltip[i].style.left = e.clientX + 'px';
-            tooltip[i].style.top = e.clientY + 'px';
-        }
+      for (var i = tooltip.length; i--;) {
+        tooltip[i].style.left = e.clientX + 'px';
+        tooltip[i].style.top = e.clientY + 'px';
+      }
     }
   </script>
   <script>
-    function runner(){
+    function runner() {
       console.log("Runner")
       const cookiesPolicy = localStorage.getItem('cookiesPolicy');
-      if (cookiesPolicy === null){
+      if (cookiesPolicy === null) {
         console.log('no cookies')
         document.getElementById('cookies').style.display = 'block';
       }
-      else if (cookiesPolicy === 'rejected'){
+      else if (cookiesPolicy === 'rejected') {
         console.log('rejected cookies')
       };
 
 
       var compOneBgHeight = document.getElementById('comp-one-bg').clientHeight;
-      document.getElementById('comp-one').style.height = compOneBgHeight+'px';
+      document.getElementById('comp-one').style.height = compOneBgHeight + 'px';
 
     }
-    function cookiesRejected(){
+    function cookiesRejected() {
       console.log("Rejected")
       localStorage.setItem('cookiesPolicy', 'rejected');
     }
-    function cookiesAccepted(){
+    function cookiesAccepted() {
       console.log("Accepted")
       localStorage.setItem('cookiesPolicy', 'accepted');
       document.getElementById('cookies').style.display = 'none';
     }
-    function checkCookiesPolicy(){
+    function checkCookiesPolicy() {
       const cookiesPolicy = localStorage.getItem('cookiesPolicy');
       console.log(cookiesPolicy);
     }
-    function eraseCookiesPolicy(){
+    function eraseCookiesPolicy() {
       localStorage.removeItem('cookiesPolicy');
       console.log('Deleted cookiesPolicy');
     }
-    function subscribePopClose(){
+    function subscribePopClose() {
       localStorage.setItem('subscribePop', 'close');
     }
-    function menuMobile(){
+    function menuMobile() {
       var menu = document.getElementById('menu-mobile');
-      if (menu.style.display == 'none'){
+      if (menu.style.display == 'none') {
         menu.style.display = 'block';
       }
       else {
@@ -274,44 +284,44 @@
 
     });
   </script>
-<!--loader script-->
-<script>
-  addEventListener('load', (event) => {
-    move();
-  });
+  <!--loader script-->
+  <script>
+    addEventListener('load', (event) => {
+      move();
+    });
 
-  let i = 0;
-  let width = 1;
-  let barContainer = document.getElementById("loader");
+    let i = 0;
+    let width = 1;
+    let barContainer = document.getElementById("loader");
 
-  function move() {
-    if (i == 0) {
-      i = 1;
+    function move() {
+      if (i == 0) {
+        i = 1;
 
-      let bar = document.getElementById("loader-bar");
-      let id = setInterval(frame, 15);
+        let bar = document.getElementById("loader-bar");
+        let id = setInterval(frame, 15);
 
-      function frame() {
-        if (width >= 100) {
-          barContainer.style.opacity = "0";
-          setTimeout(displayNone, 400);
-        } else if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-        } else {
-          width++;
-          bar.style.width = width + "%";
+        function frame() {
+          if (width >= 100) {
+            barContainer.style.opacity = "0";
+            setTimeout(displayNone, 400);
+          } else if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width++;
+            bar.style.width = width + "%";
+          }
         }
       }
+
     }
 
-  }
+    function displayNone() {
+      barContainer.style.display = "none";
+    }
 
-  function displayNone() {
-    barContainer.style.display = "none";
-  }
-
-</script>
+  </script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
@@ -324,7 +334,7 @@
     var modules = document.querySelectorAll('.session-module');
 
     modules.forEach(module => {
-      module.addEventListener('mouseenter', function(){
+      module.addEventListener('mouseenter', function () {
         this.classList.add('show');
       });
 
@@ -332,7 +342,7 @@
         this.classList.remove('show');
       });
     });
-    
+
   </script>
 </body>
 

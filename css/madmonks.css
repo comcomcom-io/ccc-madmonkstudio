@@ -23,6 +23,11 @@ ul {
   margin: 0;
 }
 
+::selection {
+  background: black;
+  color: white;
+}
+
 :root {
   --header-height: 88px;
 }
@@ -494,6 +499,35 @@ p.status {
   -o-transform: translateX(50%) translateY(-20%);
   transform: translateX(50%) translateY(-20%);
   opacity: 0;
+  max-width: 560px;
+}
+
+/* Temporary Styles */
+
+.session-module.temp {
+  padding-bottom: 0;
+}
+
+.session-module.temp .s-img {
+  opacity: 1;
+  max-width: none;
+  z-index: 1;
+  position: relative;
+  order: 2;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+  width: 100%;
+}
+
+.session-module.temp .s-top {
+  order: 0;
+}
+
+.session-module.temp .s-main {
+  order: 1;
+  padding-bottom: 32px;
 }
 
 .session-module .s-img img {
@@ -507,12 +541,15 @@ p.status {
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; */
-
   opacity: 1;
   /* -webkit-transform: translateX(50%) translateY(-20%) scaleY(1);
   -moz-transform: translateX(50%) translateY(-20%) scaleY(1);
   -o-transform: translateX(50%) translateY(-20%) scaleY(1);
   transform: translateX(50%) translateY(-20%) scaleY(1); */
+}
+
+.s-main.tba {
+  opacity: .35;
 }
 
 /* Video */
@@ -577,6 +614,13 @@ p.status {
   filter: invert(1);
   margin-bottom: 8px;
   width: 100%;
+}
+
+.social-share li:last-child img {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  filter: none;
 }
 
 /* Related Sessions */
@@ -982,6 +1026,7 @@ span.info span.medium {
     /* Default */
     list-style-type: none;
     letter-spacing: .5px;
+    padding: 0 8px;
   }
   header>.menu>ul>li>a {
     cursor: pointer;
@@ -1355,6 +1400,21 @@ span.info span.medium {
   .p-thumb a .btn {
     display: none;
   }
+  /* Temporary Mobile styles */
+  .session-module.temp .s-main p {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    margin-top: 8px;
+  }
+  .session-module.temp .s-img {
+    height: 60vh;
+  }
+  .session-module.temp .s-img img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -1438,6 +1498,12 @@ span.info span.medium {
   }
   header>.menu>ul>li>a {
     cursor: pointer;
+    padding: 0 8px 1px 8px;
+    border-radius: 32px;
+  }
+  header>.menu>ul>li:hover a {
+    background: black;
+    color: white;
   }
   header>.menu>ul>li>span.disabled {
     cursor: pointer;
