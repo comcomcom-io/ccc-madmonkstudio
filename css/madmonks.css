@@ -1406,7 +1406,7 @@ span.info span.medium {
     -moz-transform: none;
     -o-transform: none;
     transform: none;
-    margin-top: 8px;
+    margin-top: 16px;
   }
   .session-module.temp .s-img {
     height: 60vh;
@@ -1414,6 +1414,9 @@ span.info span.medium {
   .session-module.temp .s-img img {
     height: 100%;
     object-fit: cover;
+  }
+  .session-module.temp .s-main {
+    padding: 50px 0;
   }
 }
 
