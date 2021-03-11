@@ -423,9 +423,9 @@ img {
 
 /* Live Sessions */
 
-#live-sessions {
+/* #live-sessions {
   overflow: hidden;
-}
+} */
 
 .session-module {
   position: relative;
@@ -442,7 +442,7 @@ img {
 }
 
 .session-module:hover {
-  z-index: 100;
+  z-index: 1010;
 }
 
 .session-module p, .p-top p {
@@ -504,22 +504,26 @@ p.status {
 
 /* Temporary Styles */
 
-.session-module.temp {
-  padding-bottom: 0;
+.session-module {
+  height: 32vh;
+  justify-content: center;
+  /* overflow: hidden; */
 }
 
-.session-module.temp .s-img {
-  opacity: 1;
-  max-width: none;
-  z-index: 1;
-  position: relative;
-  order: 2;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  transform: none;
-  width: 100%;
+.session-module .s-img {
+  -webkit-transform: translateX(50%) translateY(0);
+  -moz-transform: translateX(50%) translateY(0);
+  -o-transform: translateX(50%) translateY(0);
+  transform: translateX(50%) translateY(0);
 }
+
+.session-module .s-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* End Temporary Styles */
 
 .session-module.temp .s-top {
   order: 0;
@@ -808,10 +812,10 @@ span.info span.medium {
     font-size: 2rem;
   }
   .s-main p {
-    -webkit-transform: translateY(-20px);
+    /* -webkit-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
     -o-transform: translateY(-20px);
-    transform: translateY(-20px);
+    transform: translateY(-20px); */
     max-width: 500px;
   }
   .related {
@@ -1351,9 +1355,21 @@ span.info span.medium {
   }
   .session-desc .right {
     width: 100%;
+    flex-direction: column;
+  }
+  .social-share {
+    margin: 0 auto 16px auto;
   }
   .social-share li {
     width: 18px;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .session-info p {
+    margin: 16px auto 0px auto;
+  }
+  .social-share li:last-child {
+    margin-right: 0;
   }
   .session-desc p {
     max-width: none;
@@ -1400,6 +1416,9 @@ span.info span.medium {
   .p-thumb a .btn {
     display: none;
   }
+  p.location, p.fecha {
+    font-size: 14px;
+  }
   /* Temporary Mobile styles */
   .session-module.temp .s-main p {
     -webkit-transform: none;
@@ -1408,15 +1427,15 @@ span.info span.medium {
     transform: none;
     margin-top: 16px;
   }
-  .session-module.temp .s-img {
-    height: 60vh;
+  .session-module.temp .s-img, .session-module {
+    height: inherit;
   }
   .session-module.temp .s-img img {
     height: 100%;
     object-fit: cover;
   }
   .session-module.temp .s-main {
-    padding: 50px 0;
+    padding: 24px 0;
   }
 }
 
