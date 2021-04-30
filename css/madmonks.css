@@ -505,7 +505,7 @@ p.status {
 /* Temporary Styles */
 
 .session-module {
-  height: 32vh;
+  height: 25vh;
   justify-content: center;
   /* overflow: hidden; */
 }
