@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Mad Monk Studios</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="js/sketch.js"></script>
+</head>
+<body>
+  <!-- The video -->
+  <video id="vid" autoplay muted loop id="myVideo">
+    <!-- <source src="MM_GIF.mp4" type="video/mp4"> -->
+  </video>
+
+
+	<button type="button" name="button" id="button" onclick="showInputs()">Customize</button>
+	<div id="inputs">
+    <div id="autoplay">
+      <p>Autoplay</p>
+    </div>
+
+    <div id="speed">
+      <p>Auto Play Speed</p>
+    </div>
+
+    <div id="rotation">
+      <p>Manual Rotation</p>
+    </div>
+
+		<div id="spacing">
+			<p>Spacing</p>
+		</div>
+
+		<div id="fontSize">
+			<p>Font Size</p>
+		</div>
+
+		<div id="density">
+			<p>Density</p>
+		</div>
+
+		<div id="spin">
+			<p>Auto Spin Letters</p>
+		</div>
+
+		<div id="letterRotation">
+			<p>Manual Letter Rotation</p>
+		</div>
+
+    <div id="bg">
+      <p>Background</p>
+    </div>
+
+		<button type="button" name="button" id="close" onclick="closeInputs()">Close Controls</button>
+	</div>
+
+	<script type="text/javascript">
+		var btn = document.getElementById('button');
+		var inpts = document.getElementById('inputs');
+
+		function showInputs(){
+			inpts.classList.add("show");
+			btn.classList.add("hide");
+		}
+
+		function closeInputs(){
+			inpts.classList.remove("show");
+			btn.classList.remove("hide");
+		}
+	</script>
+</body>
+</html>
